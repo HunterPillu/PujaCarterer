@@ -192,3 +192,41 @@ body{
 
 /* Accessibility helpers */
 a:focus,input:focus,button:focus{outline:3px solid rgba(183,28,28,0.12);outline-offset:3px}
+
+/* Fix brand overflow in header */
+.brand {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.brand > div {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Responsive adjustments to prevent overlap */
+@media (max-width: 1100px) {
+  .header-grid {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    text-align: center;
+  }
+
+  .brand,
+  .contact,
+  .search-wrap {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact {
+    order: 3;
+    max-width: 100%;
+  }
+
+  .site-header h1 {
+    font-size: 18px;
+  }
+}
