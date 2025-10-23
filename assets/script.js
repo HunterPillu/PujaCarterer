@@ -90,7 +90,7 @@ const PAGES = [
           "Aloo Palak Gravy","Mixed Veg","Veg Navratan Korma","Veg Singapuri","Veg Kurkuri",
           "Veg Jaipuri","Veg Makhanwala","Sag Mattar","Veg Jhalfrazi","Capsicum Corn Fry",
           "Paneer Babycorn Masala","Paneer Butter Masala","Paneer Sahi Korma","Kaju Mushroom",
-          "Palak Corn with Cream","Palak Mushroom","Mushroom do Pyaza","Kaju Curry,
+          "Palak Corn with Cream","Palak Mushroom","Mushroom do Pyaza","Kaju Curry",
           "Paneer Mushroom Taj","Paneer Pasanda","Palak Paneer","Moti Kofta in Palak Gravy",
           "Stuffed Capsicum","Green Peas Masala","Chana Masala","Kaju Paneer","Paneer Capsicum",
           "Paneer Tomato","Malai Kofta","Paneer Tikka Butter Masala","Paneer Pasanda",
@@ -125,7 +125,7 @@ const PAGES = [
     title: "Chicken / Mutton / Fish (Gravy & Snacks)",
     image: { src: "images/menu8.jpg", pos: "50% 35%" },
     groups: [
-      { heading: "Chicken - Gravy", items: ["Chicken Butter Masala","Chicken Do Pyaza","Sahi Chicken","Chicken Curry","Chicken Roast B. Masala","Chicken Karahi","Chicken Dehati","Chicken Tikka B." ] },
+      { heading: "Chicken - Gravy", items: ["Chicken Butter Masala","Chicken Do Pyaza","Sahi Chicken","Chicken Curry","Chicken Roast B. Masala","Chicken Karahi","Chicken Dehati","Chicken Tikka B."] },
       { heading: "Non Veg Snacks - Dry", items: ["Chicken Chilly","Chicken Chilly Garlic","Chicken Chilly Boneless","Chicken Pakora","Chicken Dry Fry","Chicken Afghani","Chicken Pudina"] },
       { heading: "Mutton", items: ["Mutton Curry","Tawa Mutton","Mutton Do Pyaza","Palak Mutton","Mutton Dehati","Mutton Karahi","Masala Mutton Fry","Mutton Korma","Mutton Rogon Josh"] },
       { heading: "Fish", items: ["Fish Curry","Live Fish Fry","Fish Tomato","Fish Sarson","Fish Amritsari","Fish Patrui","Vetki Fish Fry","Fish Cutlet","Fish Finger"] }
