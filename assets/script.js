@@ -170,13 +170,15 @@ function renderAllPages() {
   if (indicator) indicator.textContent = '';
 
   const html = PAGES.map((page, pi) => {
+    // If image src is missing or empty, we still render no-image (so layout stays consistent).
+    // The <img> has an onerror handler that hides the .feature wrapper if the file is missing or 404.
     const feature = `
       <div class="feature" style="--pos:${page.image?.pos || '50% 50%'}">
         <img
-          src="${page.image?.src || 'images/logo.jpg'}"
+          src="${page.image?.src || ''}"
           alt="${escapeHtml(page.title || '')} representative food photo"
           loading="lazy" decoding="async"
-          onerror="this.onerror=null;this.src='images/logo.jpg';"
+          onerror="(function(img){ img.onerror=null; const p=img.closest('.feature'); if(p) p.style.display='none'; })(this);"
         >
       </div>
     `;
@@ -344,11 +346,14 @@ document.addEventListener('DOMContentLoaded', () => {
   renderAllPages();
   wireSearch();
 
-  document.getElementById('pageView').addEventListener('click', (e) => {
-    const li = e.target.closest('li[data-page]');
-    if (!li) return;
-    const prev = li.style.backgroundColor;
-    li.style.backgroundColor = 'rgba(144, 202, 249, 0.25)';
-    setTimeout(() => { li.style.backgroundColor = prev || ''; }, 700);
-  });
+  const pv = document.getElementById('pageView');
+  if (pv) {
+    pv.addEventListener('click', (e) => {
+      const li = e.target.closest('li[data-page]');
+      if (!li) return;
+      const prev = li.style.backgroundColor;
+      li.style.backgroundColor = 'rgba(144, 202, 249, 0.25)';
+      setTimeout(() => { li.style.backgroundColor = prev || ''; }, 700);
+    });
+  }
 });
