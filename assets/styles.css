@@ -230,3 +230,71 @@ a:focus,input:focus,button:focus{outline:3px solid rgba(183,28,28,0.12);outline-
     font-size: 18px;
   }
 }
+
+/* Contact icons & layout helpers for Font Awesome (append or merge into assets/styles.css) */
+
+.contact {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  min-width:0;
+  color:var(--mdc-on-primary, #fff);
+}
+
+.contact-head {
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.contact-head strong { font-size:14px; }
+
+.contact-content {
+  /* static block (not collapsible) */
+}
+
+.contact-row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin:0;
+}
+.contact-link{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  text-decoration:none;
+  color:inherit;
+  padding:6px 8px;
+  border-radius:8px;
+  transition:background .12s ease, transform .08s ease;
+  white-space:nowrap;
+  font-size:13px;
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.04);
+}
+.contact-link:hover,.contact-link:focus{
+  background: rgba(255,255,255,0.06);
+  transform:translateY(-1px);
+}
+.contact-link .fa-solid,
+.contact-link .fa-brands{
+  width:18px;
+  height:18px;
+  display:inline-block;
+  font-size:18px;
+  line-height:18px;
+}
+
+/* Slight color touches */
+.contact-link.whatsapp .fa-brands { color:#25D366; }
+.contact-link.mail .fa-solid { color:#fff; }
+.contact-link.call .fa-solid { color:#fff; }
+.contact-link.address .fa-solid { color:#fff; }
+
+/* Responsive */
+@media (max-width:900px){
+  .contact { align-items:center; text-align:center; }
+  .contact-row { justify-content:center; }
+  .contact-link { font-size:14px; padding:8px; }
+}
